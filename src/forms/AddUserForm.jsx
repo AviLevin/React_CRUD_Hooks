@@ -14,31 +14,31 @@ const AddUserForm = (props) => {
 
   return (
 
-    
-      <form onSubmit={event => {
-        event.preventDefault()
-        if (!user.name || !user.username) return
 
-        props.addUser(user)
-        setUser(initialFormState)
-      }}>
-        <div className="form-group">
-          <label >Name</label>
-          <input className="form-control" type="text"
-            name="name"
-            value={user.name}
-            onChange={handleInputChange} />
-        </div>
-        <div className="form-group">
-          <label>Phone</label>
-          <input className="form-control" type="number  "
-            name="username"
-            value={user.username}
-            onChange={handleInputChange} />
-        </div>
-        <br></br>
-        <button type="submit" className="btn btn-primary">Add new user</button>
-      </form>
+    <form onSubmit={event => {
+      event.preventDefault()
+      if (!user.name || !user.username) return
+
+      props.addUser(user)
+      setUser(initialFormState)
+    }}>
+      <div className="form-group">
+        <label >Name</label>
+        <input className="form-control" type="text"
+          name="name"
+          value={user.name}
+          onChange={handleInputChange} />
+      </div>
+      <div className="form-group">
+        <label>Phone</label>
+        <input className="form-control" type="number  "
+          name="username"
+          value={user.username}
+          onChange={handleInputChange} />
+      </div>
+      <br></br>
+      <button type="submit" className="btn btn-primary">Add new user</button>
+    </form>
   )
 }
 
