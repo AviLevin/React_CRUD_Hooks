@@ -49,7 +49,9 @@ const App = () => {
   return (
     <div className="container">
       <div className="row top">
-        <h1>CRUD App with Hooks</h1>
+      <h1>
+            CRUD App with <span className="title">Hooks</span>{" "}
+          </h1>
       </div>
 
       <div className="row">

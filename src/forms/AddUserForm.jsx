@@ -30,14 +30,14 @@ const AddUserForm = (props) => {
           onChange={handleInputChange} />
       </div>
       <div className="form-group">
-        <label>Phone</label>
+        <label>Username</label>
         <input className="form-control" type="number  "
           name="username"
           value={user.username}
           onChange={handleInputChange} />
       </div>
       <br></br>
-      <button type="submit" className="btn btn-primary">Add new user</button>
+      <button type="submit" className="btn btn-primary" disabled={!user.name || !user.username}>Add new user</button>
     </form>
   )
 }
